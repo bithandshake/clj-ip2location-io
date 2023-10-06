@@ -34,9 +34,9 @@ You can track the changes of the <strong>clj-ip2location-io</strong> library [he
 
 ### How to configure the location service?
 
-Before using the `ip2location-io.api/locate-ip-address` function, provide your API key
-in a configuration file that you have to place under the `environment/ip2location-io.config.edn`
-filepath.
+Before using the `ip2location-io.api/locate-ip-address` function, provide your `ip2location.io`
+API key in a configuration file that you have to place under the `environment/ip2location-io.config.edn`
+filepath in the following format:
 
 ```
 {:api-key "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}

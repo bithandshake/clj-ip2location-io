@@ -1,11 +1,12 @@
 
 (ns ip2location-io.engine
     (:require [clj-http.client]
-              [audit.api          :as audit]
-              [ip2location-io.env :as env]
-              [json.api           :as json]
-              [map.api            :as map]
-              [reader.api         :as reader]))
+              [audit.api             :as audit]
+              [ip2location-io.env    :as env]
+              [ip2location-io.errors :as errors]
+              [json.api              :as json]
+              [map.api               :as map]
+              [reader.api            :as reader]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -64,12 +65,11 @@
   ;   ZIP/Postal code.}
   [ip-address]
   (if (audit/ip-address-valid? ip-address)
-      (let [uri      (env/ip-address->uri ip-address)
-            response (clj-http.client/get uri)]
-           (-> ip-address utils/ip-address->uri
-                          clj-http.client/get
-                          :body
-                          reader/json->map
-                          json/hyphenize-keys
-                          json/keywordize-keys
-                          (map/rekey-item :is-proxy :is-proxy?)))))
+      (-> ip-address env/ip-address->uri
+                     clj-http.client/get
+                     :body
+                     reader/json->map
+                     json/hyphenize-keys
+                     json/keywordize-keys
+                     (map/rekey-item :is-proxy :is-proxy?))
+      (throw (Exception. errors/INVALID-IP-ADDRESS))))

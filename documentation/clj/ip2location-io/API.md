@@ -78,15 +78,14 @@ described in the README.MD!
 (defn locate-ip-address
   [ip-address]
   (if (audit/ip-address-valid? ip-address)
-      (let [uri      (env/ip-address->uri ip-address)
-            response (clj-http.client/get uri)]
-           (-> ip-address utils/ip-address->uri
-                          clj-http.client/get
-                          :body
-                          reader/json->map
-                          json/hyphenize-keys
-                          json/keywordize-keys
-                          (map/rekey-item :is-proxy :is-proxy?)))))
+      (-> ip-address env/ip-address->uri
+                     clj-http.client/get
+                     :body
+                     reader/json->map
+                     json/hyphenize-keys
+                     json/keywordize-keys
+                     (map/rekey-item :is-proxy :is-proxy?))
+      (throw (Exception. errors/INVALID-IP-ADDRESS))))
 ```
 
 </details>

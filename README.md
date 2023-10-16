@@ -49,17 +49,17 @@ function connects to the ip2location.io API and returns the location details of 
 
 ```
 (locate-ip-address "x.x.x.x")
-=>
-{:as           "Go P.L.C."
- :asn          "15735"
- :city-name    "Sliema"
- :country-name "Malta"
- :country-code "MT"
- :ip           "195.158.84.203"
- :is-proxy?    false
- :latitude     "35.9125"
- :longitude    "14.50194"
- :region-name  "Sliema"
- :time-zone    "+02:00"
- :zip-code     "SLM 3180"}
+; =>
+; {:as           "Go P.L.C."
+;  :asn          "15735"
+;  :city-name    "Sliema"
+;  :country-name "Malta"
+;  :country-code "MT"
+;  :ip           "195.158.84.203"
+;  :is-proxy?    false
+;  :latitude     "35.9125"
+;  :longitude    "14.50194"
+;  :region-name  "Sliema"
+;  :time-zone    "+02:00"
+;  :zip-code     "SLM 3180"}
 ```

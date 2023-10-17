@@ -10,23 +10,18 @@
 ### locate-ip-address
 
 ```
-@warning
-Before using this function, provide your API key in the configuration file
-described in the README.MD!
-```
-
-```
 @param (string) ip-address
+@param (string) api-key
 ```
 
 ```
 @usage
-(locate-ip-address "x.x.x.x")
+(locate-ip-address "x.x.x.x" "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
 ```
 
 ```
 @example
-(locate-ip-address "x.x.x.x")
+(locate-ip-address "x.x.x.x" "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
 =>
 {:as           "Go P.L.C."
  :asn          "15735"
@@ -76,15 +71,15 @@ described in the README.MD!
 
 ```
 (defn locate-ip-address
-  [ip-address]
+  [ip-address api-key]
   (if (audit/ip-address-valid? ip-address)
-      (-> ip-address env/ip-address->uri
-                     clj-http.client/get
-                     :body
-                     reader/json->map
-                     json/hyphenize-keys
-                     json/keywordize-keys
-                     (map/rekey-item :is-proxy :is-proxy?))
+      (-> (str "http://api.ip2location.io/?ip="ip-address"&key="api-key)
+          (clj-http.client/get)
+          (:body)
+          (reader/json->map)
+          (json/hyphenize-keys)
+          (json/keywordize-keys)
+          (map/rekey-item :is-proxy :is-proxy?))
       (throw (Exception. errors/INVALID-IP-ADDRESS))))
 ```
 

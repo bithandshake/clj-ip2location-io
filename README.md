@@ -28,19 +28,7 @@ You can track the changes of the <strong>clj-ip2location-io</strong> library [he
 
 ### Index
 
-- [How to configure the location service?](#how-to-configure-the-location-service)
-
 - [How to locate an IP address?](#how-to-locate-an-ip-address)
-
-### How to configure the location service?
-
-Before using the `ip2location-io.api/locate-ip-address` function, provide your `ip2location.io`
-API key in a configuration file that you have to place under the `environment/ip2location-io.config.edn`
-filepath in the following format:
-
-```
-{:api-key "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}
-```
 
 ### How to locate an IP address?
 
@@ -48,7 +36,7 @@ The [`ip2location-io.api/locate-ip-address`](documentation/clj/ip2location-io/AP
 function connects to the ip2location.io API and returns the location details of the given IP address.
 
 ```
-(locate-ip-address "x.x.x.x")
+(locate-ip-address "x.x.x.x" "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
 ; =>
 ; {:as           "Go P.L.C."
 ;  :asn          "15735"

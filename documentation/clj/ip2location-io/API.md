@@ -1,11 +1,17 @@
 
-# ip2location-io.api Clojure namespace
+### ip2location-io.api
+
+Functional documentation of the ip2location-io.api Clojure namespace
+
+---
 
 ##### [README](../../../README.md) > [DOCUMENTATION](../../COVER.md) > ip2location-io.api
 
 ### Index
 
 - [locate-ip-address](#locate-ip-address)
+
+---
 
 ### locate-ip-address
 
@@ -99,5 +105,5 @@
 
 ---
 
-This documentation is generated with the [clj-docs-generator](https://github.com/bithandshake/clj-docs-generator) engine.
+<sub>This documentation is generated with the [clj-docs-generator](https://github.com/bithandshake/clj-docs-generator) engine.</sub>
 

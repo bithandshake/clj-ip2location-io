@@ -1,7 +1,11 @@
 
-# clj-ip2location-io documentation
+### clj-ip2location-io
 
-Documentation of the [clj-ip2location-io](https://github.com/bithandshake/clj-ip2location-io) Clojure library
+Functional documentation of the [clj-ip2location-io](https://github.com/bithandshake/clj-ip2location-io) Clojure library
+
+---
+
+
 
 ##### [README](../README.md) > DOCUMENTATION
 
@@ -11,5 +15,5 @@ Documentation of the [clj-ip2location-io](https://github.com/bithandshake/clj-ip
 
 ---
 
-This documentation is generated with the [clj-docs-generator](https://github.com/bithandshake/clj-docs-generator) engine.
+<sub>This documentation is generated with the [clj-docs-generator](https://github.com/bithandshake/clj-docs-generator) engine.</sub>
 

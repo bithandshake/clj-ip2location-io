@@ -26,6 +26,9 @@ You can track the changes of the <strong>clj-ip2location-io</strong> library [he
 
 # Usage
 
+> Some parameters of the following functions and some further functions are not discussed in this file.
+  To learn more about the available functionality, check out the [functional documentation](documentation/COVER.md)!
+
 ### Index
 
 - [How to locate an IP address?](#how-to-locate-an-ip-address)

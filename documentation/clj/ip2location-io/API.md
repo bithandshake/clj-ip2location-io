@@ -82,7 +82,7 @@ Functional documentation of the ip2location-io.api Clojure namespace
       (-> (str "http://api.ip2location.io/?ip="ip-address"&key="api-key)
           (clj-http.client/get)
           (:body)
-          (reader/json->map)
+          (reader/read-json)
           (json/hyphenize-keys)
           (json/keywordize-keys)
           (map/rekey-item :is-proxy :is-proxy?))

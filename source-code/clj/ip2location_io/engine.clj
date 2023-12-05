@@ -67,5 +67,5 @@
           (reader/read-json)
           (json/hyphenize-keys)
           (json/keywordize-keys)
-          (map/rekey-item :is-proxy :is-proxy?))
+          (map/move :is-proxy :is-proxy?))
       (throw (Exception. errors/INVALID-IP-ADDRESS))))

@@ -5,5 +5,5 @@
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
 
-; ip2location-io.engine
+; @redirect (ip2location-io.engine)
 (def locate-ip-address engine/locate-ip-address)

@@ -1,11 +1,11 @@
 
 (ns ip2location-io.engine
     (:require [clj-http.client]
-              [audit.api             :as audit]
-              [ip2location-io.errors :as errors]
-              [json.api              :as json]
-              [map.api               :as map]
-              [reader.api            :as reader]))
+              [fruits.audit.api      :as audit]
+              [fruits.json.api       :as json]
+              [fruits.map.api        :as map]
+              [fruits.reader.api     :as reader]
+              [ip2location-io.errors :as errors]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------

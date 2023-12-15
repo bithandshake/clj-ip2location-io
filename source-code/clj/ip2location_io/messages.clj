@@ -1,5 +1,5 @@
 
-(ns ip2location-io.errors)
+(ns ip2location-io.messages)
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -7,4 +7,4 @@
 ; @ignore
 ;
 ; @constant (string)
-(def INVALID-IP-ADDRESS "Invalid IP address!")
+(def INVALID-IP-ADDRESS-ERROR "Invalid IP address!")

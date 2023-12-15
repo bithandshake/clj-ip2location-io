@@ -5,7 +5,7 @@
               [fruits.json.api       :as json]
               [fruits.map.api        :as map]
               [fruits.reader.api     :as reader]
-              [ip2location-io.errors :as errors]))
+              [ip2location-io.messages :as messages]))
 
 ;; ----------------------------------------------------------------------------
 ;; ----------------------------------------------------------------------------
@@ -68,4 +68,4 @@
           (json/hyphenize-keys)
           (json/keywordize-keys)
           (map/move :is-proxy :is-proxy?))
-      (throw (Exception. errors/INVALID-IP-ADDRESS))))
+      (throw (Exception. messages/INVALID-IP-ADDRESS-ERROR))))

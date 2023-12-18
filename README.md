@@ -9,7 +9,7 @@ The <strong>clj-ip2location-io</strong> is a simple Clojure API library for ip2l
 
 ```
 {:deps {bithandshake/clj-ip2location-io {:git/url "https://github.com/bithandshake/clj-ip2location-io"
-                                         :sha     "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}}
+                                         :sha     "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"}}}
 ```
 
 ### Current version

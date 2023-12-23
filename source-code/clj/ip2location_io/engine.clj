@@ -16,9 +16,6 @@
   ;
   ; @usage
   ; (locate-ip-address "x.x.x.x" "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
-  ;
-  ; @example
-  ; (locate-ip-address "x.x.x.x" "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx")
   ; =>
   ; {:as           "Go P.L.C."
   ;  :asn          "15735"

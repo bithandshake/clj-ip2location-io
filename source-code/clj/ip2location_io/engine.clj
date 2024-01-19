@@ -61,7 +61,7 @@
       (-> (str "http://api.ip2location.io/?ip="ip-address"&key="api-key)
           (clj-http.client/get)
           (:body)
-          (reader/read-json)
+          (reader/parse-json)
           (json/hyphenize-keys)
           (json/keywordize-keys)
           (map/move :is-proxy :is-proxy?))

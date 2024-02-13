@@ -11,6 +11,9 @@
 ;; ----------------------------------------------------------------------------
 
 (defn locate-ip-address
+  ; @description
+  ; Locates the given IP address using the [ip2location.io](https://ip2location.io) API.
+  ;
   ; @param (string) ip-address
   ; @param (string) api-key
   ;

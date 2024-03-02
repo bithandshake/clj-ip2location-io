@@ -3,7 +3,7 @@
 
 ### Overview
 
-The <strong>clj-ip2location-io-api</strong> is a simple Clojure API library for ip2location.io.
+The <strong>clj-ip2location-io-api</strong> is a simple Clojure API adapter for ip2location.io.
 
 ### deps.edn
 

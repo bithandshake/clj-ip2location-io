@@ -1,7 +1,7 @@
 
 (ns ip2location-io.engine
     (:require [clj-http.client]
-              [fruits.audit.api        :as audit]
+              [data-audit.api        :as data-audit]
               [fruits.json.api         :as json]
               [fruits.map.api          :as map]
               [fruits.reader.api       :as reader]
@@ -60,7 +60,7 @@
   ;  :zip-code (string)
   ;   ZIP/Postal code.}
   [ip-address api-key]
-  (if (audit/ip-address-valid? ip-address)
+  (if (data-audit/ip-address-valid? ip-address)
       (-> (str "http://api.ip2location.io/?ip="ip-address"&key="api-key)
           (clj-http.client/get)
           (:body)

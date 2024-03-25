@@ -7,4 +7,4 @@
 ; @ignore
 ;
 ; @constant (string)
-(def INVALID-IP-ADDRESS-ERROR "Invalid IP address!")
+(def INVALID-IP-ADDRESS-ERROR "Invalid IP address")

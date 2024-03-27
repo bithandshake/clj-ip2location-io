@@ -1,7 +1,7 @@
 
 (ns ip2location-io.engine
     (:require [clj-http.client]
-              [data-audit.api        :as data-audit]
+              [data-audit.api          :as data-audit]
               [fruits.json.api         :as json]
               [fruits.map.api          :as map]
               [fruits.reader.api       :as reader]

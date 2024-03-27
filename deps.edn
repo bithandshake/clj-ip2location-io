@@ -1,8 +1,8 @@
 
 {:paths ["source-code/clj"]
  :deps  {mt-security-kit/cljc-data-audit {:git/url "https://github.com/mt-security-kit/cljc-data-audit"
-                                          :sha     "b23015fb944948f7a9e2f6921591b1e887b08913"}
+                                          :sha     "6303d88dee8fbf2977e3c6f8d725d6195024679c"}
          bithandshake/cljc-fruits        {:git/url "https://github.com/bithandshake/cljc-fruits"
-                                          :sha     "bdd03879c5d8c99bea1d7b845b39cd872e96fd74"}
+                                          :sha     "a8d3c6ff2e9a4da05e09454270b60cfd5a285f5b"}
          clj-http/clj-http               {:mvn/version "3.12.3"}
          org.clojure/clojure             {:mvn/version "1.10.1"}}}
